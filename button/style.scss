@@ -1,0 +1,49 @@
+/* Change here for changing the property */
+$bg-color: rgba(107, 10, 24, 1);
+$text-color: rgba(255, 255, 255, 1);
+$btn-clicked-color: rgba(0, 255, 0, 1);
+$button-border: none;
+$top-padding: 2rem;
+$bottom-padding: 2rem;
+$right-padding: 2rem;
+$left-padding: 2rem;
+$symmetric-padding: 2rem;
+$top-bottom-padding: 1rem;
+$left-right-padding: 3rem;
+$border-radius: 1rem;
+$opacity-main: 0.5;
+$opacity-hover: 1;
+$transition-property: all;
+$transition-duration: 0.2s;
+$transition-timing-function: ease-in-out;
+$font: 'Roboto Mono',
+monospace;
+$font-size: 1.2rem;
+
+/* Do not change below this point */
+* {
+    box-sizing: border-box;
+}
+
+button {
+    background-color: $bg-color;
+    color: $text-color;
+    border: $button-border;
+    padding: $top-bottom-padding $left-right-padding;
+    border-radius: $border-radius;
+    opacity: $opacity-main;
+    transition-property: $transition-property;
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
+    font-family: $font;
+    font-size: $font-size;
+
+    &:hover {
+        opacity: $opacity-hover;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $btn-clicked-color;
+    }
+}

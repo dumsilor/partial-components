@@ -1,0 +1,62 @@
+:root {
+    --font-family: "Roboto Mono", monospace;
+    --font-weight: 600;
+    --font-size: 1.2rem;
+    --input-font-size: 1.5rem;
+    --on-focus-input-font-size: 2rem;
+    --display-layout: flex;
+    --flex-direction: column;
+    --text-color: rgba(0, 0, 0, 0.7);
+    --on-focus-text-color: rgba(0, 0, 0, 1);
+    --justify-content: center;
+    --align-items: center;
+    --height: 100vh;
+    --flex-wrap: wrap;
+    --bottom-border: 1px solid rgba(0, 0, 0, 0.3);
+    --bottom-border-focus: 2px solid rgba(0, 0, 0, 1);
+    --transition-property: all;
+    --transition-duration: 0.2s;
+    --transition-timing-function: ease-in-out;
+    --on-focus-transform: scale(1.05);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.container {
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-weight: var(--font-weight);
+    font-style: normal;
+    display: var(--display-layout);
+    flex-direction: var(--flex-direction);
+    color: var(--text-color);
+    font-size: var(--font-size);
+}
+
+.container>* {
+    align-self: flex-start;
+}
+
+.container>input {
+    border: none;
+    border-bottom: var(--bottom-border);
+    padding: 0.25rem 0.5rem;
+    font-size: var(--input-font-size);
+    transition: var(--transition-property) var(--transition-duration) var(--transition-timing-function);
+}
+
+.container>input:focus {
+    outline: none;
+    border-bottom: var(--bottom-border-focus);
+    transform: var(--on-focus-transform);
+    font-size: var(--on-focus-input-font-size);
+    color: var(--on-focus-text-color);
+
+}

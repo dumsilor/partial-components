@@ -1,0 +1,54 @@
+/* change here for chaning the property */
+
+:root {
+    --bg-color: rgba(107, 10, 24, 1);
+    --text-color: rgba(255, 255, 255, 1);
+    --btn-clicked-color: rgba(0, 255, 0, 1);
+
+
+    /* none | hidden | dotted | dashed | solid | double */
+    --button-border: none;
+    --top-padding: 2rem;
+    --bottom-padding: 2rem;
+    --right-padding: 2rem;
+    --left-padding: 2rem;
+    --symmetric-padding: 2rem;
+    --top-bottom-padding: 1rem;
+    --left-right-padding: 3rem;
+    --border-radius: 1rem;
+    --opacity-main: 0.5;
+    --opacity-hover: 1;
+    /* all | property name  */
+    --transition-property: all;
+    --transition-duration: 0.2s;
+    --transition-timing-function: ease-in-out;
+    --font: 'Roboto Mono', monospace;
+    --font-size: 1.2rem;
+}
+
+/* do not change below this point */
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: var(--button-border);
+    padding: var(--top-bottom-padding) var(--left-right-padding);
+    border-radius: var(--border-radius);
+    opacity: var(--opacity-main);
+    transition: var(--transition-property) var(--transition-duration) var(--transition-timing-function);
+    font-family: var(--font);
+    font-size: var(--font-size);
+}
+
+button:hover {
+    opacity: var(--opacity-hover);
+    cursor: pointer;
+}
+
+button:active {
+    background-color: var(--btn-clicked-color);
+}
