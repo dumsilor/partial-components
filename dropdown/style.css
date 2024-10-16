@@ -1,6 +1,5 @@
-/* change here for chaning the property */
-
 :root {
+    /* button */
     --bg-color: rgba(107, 10, 24, 1);
     --text-color: rgba(255, 255, 255, 1);
     --btn-clicked-color: rgba(0, 255, 0, 1);
@@ -24,12 +23,12 @@
     --transition-timing-function: ease-in-out;
     --font: 'Roboto Mono', monospace;
     --font-size: 1.2rem;
-}
 
-/* do not change below this point */
+    /* dropdown-menu */
+    --dropdown-bg-color: rgba(133, 123, 255, 0.5);
+    --dropdown-item-hover-bg-color: rgba(255, 255, 255, 1);
+    --dropdown-item-hover-text-color: rgba(0, 0, 0, 1);
 
-* {
-    box-sizing: border-box;
 }
 
 button {
@@ -49,6 +48,37 @@ button:hover {
     cursor: pointer;
 }
 
+
 button:active {
     background-color: var(--btn-clicked-color);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: var(--dropdown-bg-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: none;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: var(--dropdown-item-hover-bg-color);
+    color: var(--dropdown-item-hover-text-color);
 }

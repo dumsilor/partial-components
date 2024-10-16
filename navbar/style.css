@@ -1,0 +1,55 @@
+:root {
+    --navbar-color: rgba(150, 255, 107, 0.5);
+    --font-family: "Roboto Mono", monospace;
+    --font-size: 1.1rem;
+    --font-bold: 600;
+    --nav-text-color: rgba(12, 20, 155, 0.7);
+    --nav-hover-color: rgba(123, 201, 225, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: var(--navbar-color);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-bold);
+    padding: 0 3rem;
+}
+
+nav {
+    overflow: hidden;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li>a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    padding: 100% 1rem;
+}
+
+li>a:hover {
+    background-color: var(--nav-hover-color);
+}
+
+h3 {
+    margin: 0;
+}

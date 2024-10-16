@@ -1,0 +1,49 @@
+:root {
+    --navbar-color: rgba(210, 255, 193, 0.5);
+    --font-family: "Roboto Mono", monospace;
+    --font-size: 1.1rem;
+    --font-bold: 600;
+    --nav-text-color: rgba(34, 34, 34, 0.7);
+    --nav-hover-bg-color: rgb(17, 17, 17);
+    --nav-hover-text-color: rgba(50, 50, 50, 1);
+    --number-of-nav-links: 4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    background-color: var(--navbar-color);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-bold);
+    padding: 0 2rem;
+}
+
+.nav-links {
+    display: grid;
+    grid-template-columns: repeat(var(--number-of-nav-links), 1fr);
+    align-content: center;
+}
+
+
+
+.nav-links a,
+.nav-logo a {
+    text-decoration: none;
+}
+
+.nav-links a {
+    color: var(--nav-text-color);
+}
+
+.nav-links a:hover {
+    color: var(--nav-hover-text-color);
+}
