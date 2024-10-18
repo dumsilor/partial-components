@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Login Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <form onsubmit="return onSubmit(event)">
+      <div class="form-control" id="username">
+        <label for="demo-input">Demo Input</label>
+        <input type="text" id="demo-input" placeholder="UserName" required>
+      </div>
+      <div class="form-control" id="password">
+        <label for="demo-input">Demo Password</label>
+        <input type="password" id="demo-pass" placeholder="Password" required>
+      </div>
+      <div class="form-control" id="btn">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+    <div class="login-msg">
+      <p id="msg">Login Status</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
