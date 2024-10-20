@@ -1,0 +1,56 @@
+// Define SCSS variables
+$navbar-color: rgba(150, 255, 107, 0.5);
+$font-family: "Roboto Mono",
+monospace;
+$font-size: 1.1rem;
+$font-bold: 600;
+$nav-text-color: rgba(12, 20, 155, 0.7);
+$nav-hover-color: rgba(123, 201, 225, 1);
+
+// Apply box-sizing to all elements to include padding and border in the element's total width and height
+
+// Style the container for the navbar
+.container {
+    background-color: $navbar-color; // Navbar background color
+    display: flex; // Flexbox layout
+    justify-content: space-between; // Space out items
+    font-family: $font-family; // Font family for the navbar
+    font-size: $font-size; // Font size for the navbar
+    font-weight: $font-bold; // Font weight for the navbar
+    padding: 0 3rem; // Padding on left and right
+}
+
+// Style for the navigation bar
+nav {
+    overflow: hidden; // Hide overflow
+}
+
+// Style for the logo container
+.logo {
+    display: flex; // Flexbox layout
+    align-items: center; // Center align items vertically
+    justify-content: center; // Center align items horizontally
+}
+
+// Style for the list inside the navbar
+ul {
+    display: flex; // Flexbox layout
+    list-style: none; // Remove default list style
+}
+
+// Style for the links inside the list items
+li>a {
+    text-decoration: none; // Remove underline from links
+    color: $nav-text-color; // Text color for links
+    padding: 100% 1rem; // Padding for links
+}
+
+// Change background color on hover for links
+li>a:hover {
+    background-color: $nav-hover-color; // Background color on hover
+}
+
+// Remove margin for h3 elements
+h3 {
+    margin: 0;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sign Up Page</title>
+</head>
+
+<body>
+  <div class="container">
+    <form onsubmit="return onSubmit(event)">
+      <div class="form-control" id="username">
+        <label for="uname-input">Demo Input</label>
+        <input type="text" id="uname-input" placeholder="UserName" required>
+      </div>
+      <div class="form-control" id="email">
+        <label for="email-input">Demo email</label>
+        <input type="email" id="email-input" placeholder="email" required>
+      </div>
+      <div class="form-control" id="phone-number">
+        <label for="phone-number-input">Demo number</label>
+        <input type="email" id="phone-number-input" placeholder="+880XXXXXXXXXXX" required>
+      </div>
+      <div class="form-control" id="password">
+        <label for="demo-pass">Demo Password</label>
+        <input type="password" id="demo-pass" placeholder="Password" required>
+      </div>
+      <div class="form-control" id="confirm-password">
+        <label for="pass-confirm">Demo Password</label>
+        <input type="password" id="pass-confirm" placeholder="Confirm Password" required>
+      </div>
+      <div class="form-control" id="btn">
+        <button type="submit">SignUp</button>
+      </div>
+    </form>
+    <div class="redirect">
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+    <div class="login-msg">
+      <p id="msg">Login Status</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

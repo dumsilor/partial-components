@@ -1,0 +1,142 @@
+// Define SCSS variables for easy modifications
+$form-elements-margin-top: 2rem;
+$font-size: 1.2rem;
+$font-family: "Roboto Mono",
+monospace;
+$transition-property: all;
+$transition-duration: 0.2s;
+$transition-timing-function: ease-in-out;
+
+/* text-input */
+$font-weight: 600;
+$input-font-size: 1.2rem;
+$display-layout: flex;
+$flex-direction: column;
+$text-color: rgba(0, 0, 0, 0.7);
+$on-focus-text-color: rgba(0, 0, 0, 1);
+$justify-content: center;
+$align-items: center;
+$height: 100vh;
+$flex-wrap: wrap;
+$bottom-border: 1px solid rgba(0, 0, 0, 0.3);
+$bottom-border-focus: 2px solid rgba(0, 0, 0, 1);
+$on-focus-transform: 1.01;
+$on-focus-input-font-size: 1.3rem;
+
+/* button */
+$bg-color: rgba(107, 10, 24, 1);
+$btn-text-color: rgba(255, 255, 255, 1);
+$btn-clicked-color: rgba(0, 255, 0, 1);
+$button-border: none;
+$top-padding: 2rem;
+$bottom-padding: 2rem;
+$right-padding: 2rem;
+$left-padding: 2rem;
+$symmetric-padding: 2rem;
+$top-bottom-padding: 1rem;
+$left-right-padding: 3rem;
+$border-radius: 1rem;
+$opacity-main: 0.5;
+$opacity-hover: 1;
+
+// Apply box-sizing to all elements to include padding and border in the element's total width and height
+* {
+    box-sizing: border-box;
+}
+
+// Reset body margin and set base font size
+body {
+    margin: 0;
+    font-size: 1rem;
+}
+
+// Style the container
+.container {
+    width: 100vw; // Full viewport width
+    height: 100vh; // Full viewport height
+    display: $display-layout; // Flexbox layout
+    justify-content: $justify-content; // Center content horizontally
+    align-items: $align-items; // Center content vertically
+    position: relative; // Relative positioning
+}
+
+// Style form controls
+.form-control {
+    font-family: $font-family; // Font family for form controls
+    font-optical-sizing: auto;
+    font-weight: $font-weight; // Font weight for form controls
+    font-style: normal;
+    display: $display-layout; // Flexbox layout
+    flex-direction: $flex-direction; // Column direction
+    color: $text-color; // Text color for form controls
+    font-size: $font-size; // Font size for form controls
+}
+
+// Add margin-top to all form elements except the first child
+form> :not(:first-child) {
+    margin-top: $form-elements-margin-top;
+}
+
+// Align form control children to the start of the flex container
+.form-control * {
+    align-self: flex-start;
+}
+
+// Style input elements
+.form-control input {
+    border: none;
+    border-bottom: $bottom-border; // Bottom border for input elements
+    padding: 0.25rem 0.5rem;
+    font-size: $input-font-size; // Font size for input elements
+    transition: $transition-property $transition-duration $transition-timing-function; // Transition effects
+}
+
+// Style input elements on focus
+.form-control>input:focus {
+    outline: none;
+    border-bottom: $bottom-border-focus; // Bottom border on focus
+    transform: $on-focus-transform; // Scale transform on focus
+    font-size: $on-focus-input-font-size; // Font size on focus
+    color: $on-focus-text-color; // Text color on focus
+}
+
+// Style button elements
+button {
+    background-color: $bg-color; // Background color for buttons
+    color: $btn-text-color; // Text color for buttons
+    border: $button-border; // Border style for buttons
+    padding: $top-bottom-padding $left-right-padding; // Padding for buttons
+    border-radius: $border-radius; // Border radius for buttons
+    opacity: $opacity-main; // Initial opacity for buttons
+    transition: $transition-property $transition-duration $transition-timing-function; // Transition effects
+    font-family: $font-family; // Font family for buttons
+    font-size: $font-size; // Font size for buttons
+
+    &:hover {
+        opacity: $opacity-hover; // Opacity change on hover
+        cursor: pointer; // Pointer cursor on hover
+    }
+
+    &:active {
+        background-color: $btn-clicked-color; // Background color change on active/click
+    }
+}
+
+// Style for the login message container
+.login-msg {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem 5rem;
+    border-radius: 7px;
+    color: white;
+    font-size: $font-size; // Font size for login message
+    transition: $transition-property $transition-duration ease-in-out; // Transition effects
+    opacity: 1;
+}
+
+// Style for hiding elements
+.hide {
+    opacity: 0; // Change opacity to hide
+    transition: $transition-property $transition-duration ease-in-out; // Transition effects
+}

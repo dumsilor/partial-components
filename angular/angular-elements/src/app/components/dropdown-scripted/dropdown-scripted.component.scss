@@ -1,0 +1,110 @@
+/* Define custom properties to allow easy modifications */
+$bg-color: rgba(107, 10, 24, 1);
+$text-color: rgba(255, 255, 255, 1);
+$btn-clicked-color: rgba(0, 255, 0, 1);
+$button-border: none;
+$top-padding: 2rem;
+$bottom-padding: 2rem;
+$right-padding: 2rem;
+$symmetric-padding: 2rem;
+$top-bottom-padding: 1rem;
+$left-right-padding: 3rem;
+$border-radius: 1rem;
+$opacity-main: 0.5;
+$opacity-hover: 1;
+$transition-property: all;
+$transition-duration: 0.2s;
+$transition-timing-function: ease-in-out;
+$font: 'Roboto Mono',
+monospace;
+$font-size: 1.2rem;
+$dropdown-bg-color: rgba(133, 123, 255, 0.5);
+$dropdown-item-hover-bg-color: rgba(255, 255, 255, 1);
+$dropdown-item-hover-text-color: rgba(0, 0, 0, 1);
+
+/* Apply box-sizing to all elements to include padding and border in the element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* Style for button elements */
+button {
+    background-color: $bg-color;
+    /* Background color for the button */
+    color: $text-color;
+    /* Text color for the button */
+    border: $button-border;
+    /* Border style for the button */
+    padding: $top-bottom-padding $left-right-padding;
+    /* Padding for the button */
+    border-radius: $border-radius;
+    /* Rounded corners for the button */
+    opacity: $opacity-main;
+    /* Initial opacity for the button */
+    transition: $transition-property $transition-duration $transition-timing-function;
+    /* Transition effects */
+    font-family: $font;
+    /* Font family for the button */
+    font-size: $font-size;
+    /* Font size for the button */
+
+    &:hover {
+        opacity: $opacity-hover;
+        /* Opacity change on hover */
+        cursor: pointer;
+        /* Pointer cursor on hover */
+    }
+
+    &:active {
+        background-color: $btn-clicked-color;
+        /* Background color change on active/click */
+    }
+}
+
+/* Style for dropdown container */
+.dropdown {
+    position: relative;
+    /* Position the dropdown container relative to its normal position */
+    display: inline-block;
+    /* Display inline-block to allow positioning */
+}
+
+/* Style for dropdown menu */
+.dropdown-menu {
+    position: absolute;
+    /* Absolute positioning for the dropdown menu */
+    background-color: $dropdown-bg-color;
+    /* Background color for the dropdown menu */
+    min-width: 160px;
+    /* Minimum width for the dropdown menu */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* Box shadow for the dropdown menu */
+    z-index: 1;
+    /* Ensure the dropdown menu is on top */
+    display: none;
+    /* Initially hide the dropdown menu */
+
+    a {
+        color: black;
+        /* Text color for links in the dropdown menu */
+        padding: 12px 16px;
+        /* Padding for links in the dropdown menu */
+        text-decoration: none;
+        /* Remove underline from links */
+        display: block;
+        /* Display links as block elements */
+
+        &:hover {
+            background-color: $dropdown-item-hover-bg-color;
+            /* Background color on hover */
+            color: $dropdown-item-hover-text-color;
+            /* Text color on hover */
+        }
+    }
+}
+
+
+
+.dropdown-menu.show {
+    display: block;
+}
